@@ -1,0 +1,33 @@
+
+
+Types of DB :-
+
+
+   A)     SQL (Relational Database)  --> {RDMS}
+
+            - Data tables me store hota hai.
+            - Har table ka structure pehle define karna padta hai.
+            - Data ke beech relationships maintain kar sakte hain. (inter related)
+            - Example: Banking, School Management System.
+
+
+   B)     NoSQL (Non-Relational Database)
+
+            - Data ko flexible format me store karta hai.
+            - Fixed columns ki zarurat nahi hoti.
+            - Jab data bahut zyada ya frequently change hota ho tab useful hai.
+            - Example: Social Media Apps, Chat Applications.
+
+
+
+In short :
+
+SQL -->  Structured data + Relationships 
+         Stores data in Tables (Rows & Columns) 
+         Examples : MySQL, PostgreSQL, Oracle 
+
+NoSQL --> Flexible data + High scalability
+          Stores data in Documents, Key-Value, Graph, etc. 
+          Examples : MongoDB, Cassandra, Redis
+
+
