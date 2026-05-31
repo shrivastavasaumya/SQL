@@ -1,0 +1,44 @@
+                                                        DATABASE
+                                                     --------------
+
+
+Database *
+    ↓
+Stored and managed by
+    ↓
+DBMS  *  [ database k upr ki additional layer hoti hai, hum database access krne k liye jo bhi function likhenge vo DBMS main aate hai]
+    ↓
+Accessed using
+    ↓
+SQL  *
+
+
+                                                  user ------> DBMS ------> DB
+                                                                ^
+                                                                |
+                                                                |
+                                                                |
+                                                         (SQL used here) 
+                                                1. User sends request using SQL
+                                                2. DBMS processes the request
+                                                3. DBMS updates the Database
+                                                4. DBMS returns result to the User
+
+
+
+{ Term }                          -->      { Brief Explanation }
+
+ Database                          :  An organized collection of related data stored electronically. 
+
+ DBMS (Database Management System) :  Software application used to create, manage, update, and retrieve data from databases. 
+
+ SQL (Structured Query Language)   :  A language used to communicate with and manipulate data in a database. 
+
+
+
+
+| Concept  | Easy Analogy                                        |
+| -------- | --------------------------------------------------- |
+| Database | A library full of books                             |
+| DBMS     | The librarian who manages the library               |
+| SQL      | The language you use to ask the librarian for books |
