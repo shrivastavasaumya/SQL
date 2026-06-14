@@ -1,0 +1,89 @@
+
+Datatypes in SQL :-
+================
+
+Category           | Data Type                  | Description / Range                                                   | Usage Example
+-------------------|----------------------------|-----------------------------------------------------------------------|------------------------------------
+Numeric            | TINYINT                    | 1 byte, range: -128 to 127 (signed), 0 to 255 (unsigned)              | Boolean flags, Small counters
+                   | SMALLINT                   | 2 bytes, range: -32,768 to 32,767 (signed), 0 to 65,535 (unsigned)    | Age, Quantity
+                   | MEDIUMINT                  | 3 bytes, range: -8,388,608 to 8,388,607 (signed), 0 to 16,777,215     | IDs, Medium ranges
+                   | INT / INTEGER              | 4 bytes, range: -2,147,483,648 to 2,147,483,647 (signed)              | Student ID, Employee Number
+                   | BIGINT                     | 8 bytes, range: ±9 quintillion (signed), 0 to 18 quintillion          | Bank account numbers, Large counts
+                   | DECIMAL(p,s) / NUMERIC     | Fixed precision and scale (exact values)                              | Salary, Price, Money
+                   | FLOAT / REAL               | Approximate floating-point numbers                                    | Scientific data, Measurements
+                   | DOUBLE                     | Higher precision floating-point numbers                               | Complex financial calculations  {Double of FLOAT}
+
+Character/String   | CHAR(n)                    | Fixed-length string (pads with spaces if shorter)                     | Gender (M/F), Codes     {khali space delete nahi krta; then vo memory leti hai}
+                   | VARCHAR(n)                 | Variable-length string up to n characters                             | Names, Emails            {khud khali space hata deta hai; memory km leta hai}
+                   | TEXT                       | Large text data                                                       | Descriptions, Comments
+
+Date & Time        | DATE                       | Calendar date (YYYY-MM-DD)                                            | Birthdate, Join date
+                   | TIME                       | Time of day (HH:MM:SS)                                                | Check-in, Check-out times
+                   | DATETIME / TIMESTAMP       | Stores both date and time (YYYY-MM-DD HH:MM:SS)                       | Transaction logs, Events
+                   | YEAR                       | Year only (YYYY)                                                      | Year of manufacture
+
+Boolean & Binary   | BOOLEAN / BOOL             | Stores TRUE or FALSE (in MySQL = TINYINT(1))                          | Active/Inactive status, Flags   {Boolean internally it uses TINYINT in form of 0(false) and 1(True)}
+                   | BIT(n)                     | Stores n bits (up to 64 bits)                                         | Yes/No values, Permissions   {we can define the length og the bit, Example here 'n'}
+                   | BLOB (Binary Large Object) | Large binary data (images, files, audio, video)                       | Profile pictures, Documents
+
+
+
+-- Important MySQL Data Types (One-Line Definitions)
+    1. INT → Stores whole numbers (e.g., id, age).
+    2. BIGINT → Stores very large whole numbers.
+    3. DECIMAL(p,s) → Stores exact decimal numbers, ideal for money values.
+    4. VARCHAR(n) → Stores variable-length strings up to n characters.
+    5. CHAR(n) → Stores fixed-length strings of n characters.
+    6. TEXT → Stores large text data.
+    7. DATE → Stores date values in YYYY-MM-DD format.
+    8. DATETIME → Stores both date and time.
+    9. TIMESTAMP → Stores date and time with automatic update capability.
+   10. BOOLEAN → Stores TRUE or FALSE values.
+
+
+
+
+
+-- Most Important MySQL Data Types (Example)
+    CREATE TABLE important_datatypes_demo (
+        id INT,
+        big_number BIGINT,
+        salary DECIMAL(10,2),
+        name VARCHAR(100),
+        gender CHAR(1),
+        description TEXT,
+        birth_date DATE,
+        created_at DATETIME,
+        updated_at TIMESTAMP,
+        is_active BOOLEAN
+    );
+
+
+
+Additional :-
+==========
+
+UNSIGNED means only positive values (and zero) are allowed. It removes the negative range and uses that space to increase the positive range.
+
+Signed and Unsigned for Numeric- 
+
+| Data Type          | Range       |
+| ------------------ | ----------- |
+| `TINYINT`          | -128 to 127 |
+| `TINYINT UNSIGNED` | 0 to 255    |   range of negative numbers changed to positive numbers
+
+
+
+|   Data Type   |   Bytes   |   Signed Range                                          |   Unsigned Range                |
+| ------------- | --------- | ------------------------------------------------------- | ------------------------------- |
+| `TINYINT`     | 1         | −128 to 127                                             | 0 to 255                        |
+| `SMALLINT`    | 2         | −32,768 to 32,767                                       | 0 to 65,535                     |
+| `MEDIUMINT`   | 3         | −8,388,608 to 8,388,607                                 | 0 to 16,777,215                 |
+| `INT`         | 4         | −2,147,483,648 to 2,147,483,647                         | 0 to 4,294,967,295              |
+| `BIGINT`      | 8         | −9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 0 to 18,446,744,073,709,551,615 |
+
+
+Easy memory trick:
+
+Signed → allows + and -  
+Unsigned → allows only + (and 0)
