@@ -1,0 +1,30 @@
+Components of a table in SQL :-
+
++------------------+
+|    Database      |   : Collection of related data
++------------------+
+         |
+         ▼
++------------------+
+|     Schema       |   : Blueprint/structure of the database (defines tables, columns, relationships)
++------------------+     A logical container or structural design of the database.
+         |
+         ▼
++------------------+
+|      Table       |   : Stores actual data in rows and columns
++------------------+
+| ID | Name | Age  |   : Column -> A specific attribute of the data {here; ID, Name, Age }
++------------------+
+| 1  | Saumya | 22 |
+| 2  | Rahul  | 21 |   : Row / Tuple -> One complete record  { here; 1, Saumya, 22}
++------------------+                    [ek single vyakti ki information = a single TUPLE / ROW ]
+
+
+
+Quick Analogy:
+
+|   Database          |      Schema             | Table     |
+       as                      as                   as
+| School Building     | Building Blueprint      | Classroom |
+
+Database → contains Schema → Schema contains Tables → Tables contain Rows & Columns.
