@@ -1,0 +1,10 @@
+Types of SQL commands :-
+
+| Category                               | Purpose                   | Common Commands                       |
+| -------------------------------------- | ------------------------- | ------------------------------------- |
+|   DDL   (Data Definition Language)     | Define database structure |  CREATE ,  ALTER ,  DROP ,  TRUNCATE  |
+|   DML   (Data Manipulation Language)   | Modify data               |  INSERT ,  UPDATE ,  DELETE           |
+|   DQL   (Data Query Language)          | Retrieve data             |  SELECT                               |
+|   DCL   (Data Control Language)        | Control permissions       |  GRANT ,  REVOKE                      |
+|   TCL   (Transaction Control Language) | Manage transactions       |  COMMIT ,  ROLLBACK ,  SAVEPOINT      |
+
