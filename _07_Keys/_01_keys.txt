@@ -1,0 +1,32 @@
+There are two types of keys :-
+
+
+A) Primary key :-
+
+It is a column (or set of columns) in a table that uniquely identifies each row.(a unique id)
+There is only 1 PK & it should be(automatically is) NOT null.
+
+Example: School main name same ho skta tha, but roll no. nahi isliye roll no. is a 'primary key'
+         Instagram main 'name + email_id' dono ko milakr ek primary key bana skte hai 
+
+Rules for PK:
+✔ Must be UNIQUE
+✔ Cannot be NULL
+✖ Cannot be Duplicate
+
+
+
+B) Foreign key :-
+
+A Foreign key is a column (or set of columns) in a table that refers to the primary key in another table
+FK can have duplicate value & null values
+There can be multiple FKs
+
+
+ PK = "Main Aadhaar Number" (unique)
+ FK = "Aadhaar Number written in multiple forms/documents" (duplicate allowed)
+
+Rules for FK:
+✔ Duplicates Allowed
+✔ Can appear many times
+✔ Must exist in Users.user_id
