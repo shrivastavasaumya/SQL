@@ -1,0 +1,36 @@
+Rules for data in the table :-
+===========================
+
+
+    Constraint                       Description                                          Example                                                           
+    ----------------------------     ------------------------------------------------     --------------------------------------------------------------    
+      NOT NULL                       Column cannot contain NULL (empty) values               name VARCHAR(50) NOT NULL                                          
+      UNIQUE                         All values in the column must be different              email VARCHAR(100) UNIQUE                                          
+      PRIMARY KEY                    Uniquely identifies each row (UNIQUE + NOT NULL)        id INT PRIMARY KEY                                                 
+      FOREIGN KEY                    Creates a relationship between two tables               dept_id INT, FOREIGN KEY (dept_id) REFERENCES Department(id)       
+      CHECK                          Ensures values satisfy a condition                      age INT CHECK (age >= 18)                                          
+      DEFAULT                        Assigns a default value if none is provided             city VARCHAR(50) DEFAULT 'Indore'                                  
+      AUTO_INCREMENT   (MySQL)       Automatically generates sequential numbers              id INT AUTO_INCREMENT PRIMARY KEY                                  
+
+
+CREATE TABLE Student (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    age INT CHECK (age >= 18),
+    city VARCHAR(50) DEFAULT 'Indore'
+);
+
+
+~~     Quick Memory Trick
+
+   
+     PRIMARY KEY       →  Uniquely identifies each row + not null {hum sirf ek hi column/ ek hi set of columns ko PRIMARY KEY bana skte hai}                     
+     AUTO_INCREMENT    →  Automatically generates next id                  
+     NOT NULL          →  Value required, cannot be empty ( NULL )                   
+     UNIQUE            →  No Duplicate values                 
+     CHECK             →  Validate condition                    
+     DEFAULT           →  if none, Assigns a default value     
+     FOREIGN KEY       →  Connects tables {key which is primary for a table is imported to another table to build a relation } 
+                          apne table main 'primary key' ho pr jb doosre table main usse use/link kia toh vo 'FOREIGN KEY' ho gai       
+     REFERENCES        →  Specifies which table/column the FK points to    
