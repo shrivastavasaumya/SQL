@@ -1,0 +1,11 @@
+
+
+Enhanced Entity-Relationship (EER) diagram 
+
+This model represents the logical structure of a database, including entities, their attributes, and relationships between them.
+Concepts like inheritance, specialization, generalization, and union types. 
+Act as physical data models that map directly to actual SQL tables, columns, primary keys, and foreign key relationships.
+
+In Short :-
+
+Data Visualization of the DB by elaborating in a structured way, showing all the constarints and keys in it.
