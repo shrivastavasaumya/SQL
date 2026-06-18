@@ -1,0 +1,28 @@
+
+Additional :-
+==========
+
+UNSIGNED means only positive values (and zero) are allowed. It removes the negative range and uses that space to increase the positive range.
+
+Signed and Unsigned for Numeric- 
+
+| Data Type          | Range       |
+| ------------------ | ----------- |
+| `TINYINT`          | -128 to 127 |
+| `TINYINT UNSIGNED` | 0 to 255    |   range of negative numbers changed to positive numbers
+
+
+
+|   Data Type   |   Bytes   |   Signed Range                                          |   Unsigned Range                |
+| ------------- | --------- | ------------------------------------------------------- | ------------------------------- |
+| `TINYINT`     | 1         | −128 to 127                                             | 0 to 255                        |
+| `SMALLINT`    | 2         | −32,768 to 32,767                                       | 0 to 65,535                     |
+| `MEDIUMINT`   | 3         | −8,388,608 to 8,388,607                                 | 0 to 16,777,215                 |
+| `INT`         | 4         | −2,147,483,648 to 2,147,483,647                         | 0 to 4,294,967,295              |
+| `BIGINT`      | 8         | −9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 0 to 18,446,744,073,709,551,615 |
+
+
+Easy memory trick:
+
+Signed → allows + and -  
+Unsigned → allows only + (and 0)
