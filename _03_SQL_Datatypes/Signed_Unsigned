@@ -26,3 +26,15 @@ Easy memory trick:
 
 Signed → allows + and -  
 Unsigned → allows only + (and 0)
+
+
+
+When to Use?
+
+-- SIGNED:
+-- Temperature, profit/loss, bank balance changes
+-- (values can be negative)
+
+-- UNSIGNED:
+-- Age, marks, quantity, followers count
+-- (values can never be negative)
