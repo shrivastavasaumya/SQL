@@ -1,0 +1,42 @@
+AND (to check for both conditions to be true)
+OR (to check for one of the conditions to be true)
+BETWEEN (selects for a given range)
+IN (matches any value in the list)
+NOT (to negate the given condition)
+
+
+
+
+LIMIT CLAUSE
+Sets an upper limit on number of (tuples) rows to be returned
+# humari query ko 10000 lof sttisfy kr rahe hai, but hume kisi bhe 5 ki chalegi, toh hum limit laga denge output pr
+
+
+ORDER CLAUSE
+To sort in ascending(ASC) or descending order (DESC)
+by default sorting ascending ain hi hoti hai yehi sorting order nahi define kia toh, mentioned column ka
+
+
+GROUP BY CLAUSE  
+groups rows that have the same values into summary rows
+It collects data from multiple records and groups the result by one or more column 
+* generally, it is used with some aggregate function
+
+
+WHERE CLAUSE{ rows pr condition apply krta tha}
+
+
+HAVING CLAUSE  {groups pr condition apply krta hai}
+similar to WHERE i.e. applies some conditions on row
+But it is used when we want to apply any condition after grouping
+* grouping is necessary for HAVING
+
+
+GENERAL ORDER :-
+
+SELECT columns
+FROM table_name
+WHERE condition
+GROUP BY columns
+HAVING condition
+ORDER BY columns ASC/DESC;
