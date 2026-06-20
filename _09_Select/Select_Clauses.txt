@@ -1,3 +1,6 @@
+
+LOGICAL OPERATORS :-
+   
 AND (to check for both conditions to be true)
 OR (to check for one of the conditions to be true)
 BETWEEN (selects for a given range)
@@ -5,34 +8,35 @@ IN (matches any value in the list)
 NOT (to negate the given condition)
 
 
+CLAUSES :-
 
-
-LIMIT CLAUSE
+A) LIMIT CLAUSE
 Sets an upper limit on number of (tuples) rows to be returned
-# humari query ko 10000 lof sttisfy kr rahe hai, but hume kisi bhe 5 ki chalegi, toh hum limit laga denge output pr
+# humari query ko 10000 lo satisfy kr rahe hai, but hume kisi bhe 5 ki chalegi, toh hum limit laga denge output pr
 
 
-ORDER CLAUSE
+B) ORDER CLAUSE
 To sort in ascending(ASC) or descending order (DESC)
 by default sorting ascending ain hi hoti hai yehi sorting order nahi define kia toh, mentioned column ka
 
 
-GROUP BY CLAUSE  
+C) GROUP BY CLAUSE  
 groups rows that have the same values into summary rows
 It collects data from multiple records and groups the result by one or more column 
 * generally, it is used with some aggregate function
 
 
-WHERE CLAUSE{ rows pr condition apply krta tha}
+D) WHERE CLAUSE{ rows pr condition apply krta tha}
 
 
-HAVING CLAUSE  {groups pr condition apply krta hai}
+E) HAVING CLAUSE 
+{groups pr condition apply krta hai}
 similar to WHERE i.e. applies some conditions on row
 But it is used when we want to apply any condition after grouping
 * grouping is necessary for HAVING
 
 
-GENERAL ORDER :-
+GENERAL order to be followed to use the different clauses and queries  :-
 
 SELECT columns
 FROM table_name
