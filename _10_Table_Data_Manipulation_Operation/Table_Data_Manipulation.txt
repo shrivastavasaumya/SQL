@@ -1,0 +1,18 @@
+--------------------------------------------------- Manipulation Operation ---------------------------------------------------
+1.) UPDATE  :-
+
+command is used to modify existing records in a table.
+
+UPDATE table_name SET
+column1  value1, column2
+= value2 WHERE
+condition;
+
+
+2.) DELETE :-
+
+command removes records from a table.
+
+DELETE FROM
+table_name WHERE
+condition;
