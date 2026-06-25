@@ -1,0 +1,64 @@
+DDL Commands
+Data Definition Language - Defining and optimizing database structure.
+
+--------------------------------------------------- Table Manipulation Operations ---------------------------------------------------
+
+1.) ALTER 
+(To change the schema) 
+It adds, deletes, renames or modifies columns in an existing table.
+
+
+        A) ADD COLUMN :
+                ALTER TABLE table_name 
+                ADD column_name datatype constraints;
+
+
+
+        B)  MODIFY COLUMN : Use to modify column's datatype and constraint
+                ALTER TABLE table_name
+                MODIFY COLUMN col_name new_datatype new_constraint;
+
+        C)  CHANGE COLUMN : Use to change column name, datatype and constraint
+                ALTER TABLE table_name
+                CHANGE COLUMN old_name new_name new_datatype new_constraint;
+
+
+DIFFERENCE BETWEEN CHANGE AND MODIFY : 
+MODIFY COLUMN changes a column’s data type, while CHANGE COLUMN renames the column and can also change its data type.
+
+
+2.) DROP 
+
+    A) DROP TABLE :
+        is used to drop an existing table in a database.
+        {poori table hi delete ho jaati hai contents + table}
+
+        DROP TABLE
+        table_name;
+
+
+    
+    B) DROP COLUMN : Use to remove column from existing table
+        ALTER TABLE table_name
+        DROP COLUMN column_name;
+
+
+    C)  RENAME TO : Use to rename, name of existing table
+        ALTER TABLE table_name
+        RENAME TO new_table_name;
+
+
+DIFFERENCE BETWEEN TRUNCATE AND DROP : 
+           Truncate is used to delete the whole data of table but table will exist in DB
+           DROP TABLE is used to delete full table schema from DB
+
+
+3.) TRUNCATE
+is used to delete the data inside a table, but not the table itself.
+{only contents} table will remain in DB
+-- deletes whole data of the table  {table rahegi bs, poori khali ho jaygi}
+
+TRUNCATE TABLE
+table_name;
+
+
