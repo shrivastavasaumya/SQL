@@ -1,0 +1,34 @@
+Transactions :-
+
+
+Series of operations, seen as a whole
+EX - Transfer of money from A to B, sum of all the backend process involved with this transfer is a "Transaction"
+
+
+These 'Transaction' should follow the below properties-
+
+
+ACID Properties / DBMS Asset Properties
+~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~
+
+1.) ATOMICITY - All statements succeed or non succeed  
+{ya to poora kaam hoga, ya bilkul nahi hoga}
+Ex - When we use Paytm either the transfer is done, money deducts (succeed) or if declined then no amount is deducted (not succeed)
+
+
+2.) CONSISTENCY - Data moves from one valid state to another
+{DB consistency gets hurt when we store a negative value in it}
+Ex - If B wants 100rs from A, but he has 10rs only, then this will give a -ve value because of insufficiency of the money(which is data here) 
+so for this reason, the "Transaction" will not happen to maintain CONSISTENCY
+
+
+3.) ISOLATION - Parallel transactions don't interfere
+Ex - If A lends money to both B and C then this won't we treated as a whole. A to C and A to B both are different "Transactions"
+
+
+4.) DURABILITY - Committed data is permanently saved.
+Ex - when the bank PIN is entered in the end 
+    If the PIN is correct = Commit done (final), and will be saved in the DB permanently
+    But, if PIN is incorrect = Commit undone, all steps will be rollbacked 
+
+    
