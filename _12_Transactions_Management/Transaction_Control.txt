@@ -1,0 +1,51 @@
+
+MySQL (by default) -------> treats every Single statement --------> treats as a single transaction ----> and auto commit it
+      
+1.) To check the commit status
+    SELECT @@autocommit
+
+    '1' = autocommit is 'ON'
+    '0' - autocommit is 'OFF'
+
+2.) To Disable autocommit
+    SET autocommit = 0;
+
+3.) To Enable autocommit
+    SET autocommit = 1;
+
+
+
+
+
+Start & commit transaction :-
+
+
+START TRANSACTION;
+
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;
+
+COMMIT;
+
+
+TO ROLLBACK :-
+
+If something goes wrong and you want to "roll back" the changes made during the transaction, issue the ROLLBACK statement. 
+This statement restores the database to its state before the transaction started
+ONLY THOSE STATEMENTS WHICH ARE NOT YET COMMITED CAN BE ROLLBACKED (UNDO)
+
+ROLLBACK ;
+
+
+
+ROLLBACK TO SAVEPOINT
+{helps to commit partial changes}
+The ROLLBACK TO SAVEPOINT command allows us to roll back the transaction to a specific savepoint, effectively undoing changes
+made after that point
+
+So, that if an 'ERROR' occurs then, whole transaction won't fail, and the parts can be rollbacked
+
+SAVEPOINT SAVE_POINT_NAME;    (statements above it becomes separate, residing within the same transaction)
+
+ROLLBACK TO SAVEPOINT SAVEPOINT_NAME;  {we haven't wrote only 'ROLLBACK' (because then all the changes cause they are not yet committed will be ROLLBACKED)
+                                          so specifically SAVE_POINT_NAME mentioned} 
