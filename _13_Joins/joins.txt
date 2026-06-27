@@ -1,0 +1,54 @@
+JOINS :-
+
+JOINS are used to combine rows from two or more tables based on a related column between them.
+
+INNER JOINS
+
+SELECT column                            {all the columns from both the tables}
+FROM tableA                              {on which table we are performing INNER JOIN}
+INNER JOIN tableB                        {with this table}
+ON tableA.col_name = tableB.col_name;    {based on which common parameters}
+
+
+LEFT JOIN / LEFT OUTER JOIN
+
+Along with the common values, select all values of table "A"
+(jaha pr bhi "table B" ki value nahi hongi, vha "A" wale data main 'null' values aajyngi)
+
+SELECT column                            
+FROM tableA                             
+LEFT JOIN tableB                        
+ON tableA.col_name = tableB.col_name;    
+
+
+RIGHT JOIN 
+
+SELECT column                            
+FROM tableA                             
+RIGHT JOIN tableB                        
+ON tableA.col_name = tableB.col_name;    
+
+
+
+OUTER JOIN
+
+SELECT column                            
+FROM tableA                             
+LEFT JOIN tableB                        
+ON tableA.col_name = tableB.col_name  
+UNION  -- extracts inner join cause the value is taken twice by both tables individually
+SELECT column                            
+FROM tableA                             
+RIGHT JOIN tableB                        
+ON tableA.col_name = tableB.col_name;  
+
+
+
+
+CROSS JOIN 
+
+{ TABLE_A ki hr ek row ko TABLE_B ki saari rows se combine kr dega}
+
+SELECT column
+FROM tableA
+CROSS JOIN tableB;
