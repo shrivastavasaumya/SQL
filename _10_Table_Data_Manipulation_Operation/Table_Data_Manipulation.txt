@@ -1,3 +1,7 @@
+DML Commands
+Data Manipulation Language Commands - Manipulating data rows.
+
+
 --------------------------------------------------- Manipulation Operation ---------------------------------------------------
 1.) UPDATE  :-
 
