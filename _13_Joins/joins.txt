@@ -2,7 +2,7 @@ JOINS :-
 
 JOINS are used to combine rows from two or more tables based on a related column between them.
 
-INNER JOINS
+A} INNER JOINS
 
 SELECT column                            {all the columns from both the tables}
 FROM tableA                              {on which table we are performing INNER JOIN}
@@ -10,7 +10,7 @@ INNER JOIN tableB                        {with this table}
 ON tableA.col_name = tableB.col_name;    {based on which common parameters}
 
 
-LEFT JOIN / LEFT OUTER JOIN
+B} LEFT JOIN / LEFT OUTER JOIN
 
 Along with the common values, select all values of table "A"
 (jaha pr bhi "table B" ki value nahi hongi, vha "A" wale data main 'null' values aajyngi)
@@ -21,7 +21,7 @@ LEFT JOIN tableB
 ON tableA.col_name = tableB.col_name;    
 
 
-RIGHT JOIN 
+C} RIGHT JOIN 
 
 SELECT column                            
 FROM tableA                             
@@ -30,7 +30,7 @@ ON tableA.col_name = tableB.col_name;
 
 
 
-OUTER JOIN
+D} OUTER JOIN
 
 SELECT column                            
 FROM tableA                             
@@ -44,11 +44,66 @@ ON tableA.col_name = tableB.col_name;
 
 
 
-
-CROSS JOIN 
+E} CROSS JOIN 
 
 { TABLE_A ki hr ek row ko TABLE_B ki saari rows se combine kr dega}
 
 SELECT column
 FROM tableA
 CROSS JOIN tableB;
+
+
+F} SELF JOIN
+Is a inner join but works left to right, and works on same table
+
+SELECT column 
+FROM table as a 
+JOIN table as b 
+ON a.col_name = b.col_name;
+
+
+
+------------------------------------------------------------------Exclusive Joints---------------------------------------------------------------
+
+
+1.} LEFT EXCLUSIVE JOIN
+
+Returns: All rows from the left table that do not have a match in the right table.
+
+Explanation:
+
+Performs a LEFT JOIN.
+Keeps only rows where the right table has NULL.
+Shows customers who never placed an order.
+
+
+2.} RIGHT EXCLUSIVE JOIN
+
+Returns: All rows from the right table that do not have a match in the left table.
+
+Explanation:
+
+Performs a RIGHT JOIN.
+Keeps only rows where the left table has NULL.
+Shows orders whose customer doesn't exist in the Customers table.
+
+3.} FULL EXCLUSIVE JOIN
+
+Returns: Rows that exist in only one of the tables (non-matching rows from both sides).
+
+Explanation:
+
+Performs a FULL JOIN.
+Removes all matching rows.
+Returns only unmatched rows from both tables.
+
+
+Quick Summary :-
+
+Join Type	                          Returns
+LEFT EXCLUSIVE JOIN        	Rows only in the left table (no match in right)
+RIGHT EXCLUSIVE JOIN       	Rows only in the right table (no match in left)
+FULL EXCLUSIVE JOIN	         Rows present in either table but not in both
+
+Note: LEFT EXCLUSIVE JOIN, RIGHT EXCLUSIVE JOIN, and FULL EXCLUSIVE JOIN are not official SQL keywords.
+      They are common names for filtering the results of LEFT JOIN, RIGHT JOIN, or FULL JOIN using WHERE ... IS NULL.
