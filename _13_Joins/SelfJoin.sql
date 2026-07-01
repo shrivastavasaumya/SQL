@@ -29,16 +29,10 @@ SELECT *FROM customers;
 SELECT *FROM orders;
 
 
--- Full Join
+
+-- Self Join
 
 SELECT *
-FROM customers c 
-LEFT JOIN orders o    -- All values of left table and maching values from right table
-ON c.customer_id = o.customer_id
-
-UNION   -- union -- extracts the common parts taken by both of them indvidually 
-
-SELECT *
-FROM customers c 
-RIGHT JOIN orders o    -- All values of right table and maching values from left table
-ON c.customer_id = o.customer_id;
+FROM customers as A
+JOIN customers as B
+ON A.customer_id = B.customer_id;
